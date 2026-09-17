@@ -12,7 +12,7 @@ export class GatewaysResource {
 
   async list(params?: ListGatewaysParams): Promise<GatewayCredentialResponse[]> {
     return this.http.get<GatewayCredentialResponse[]>("/api/gateways", {
-      params,
+      params: params as Record<string, string | number | undefined>,
     });
   }
 

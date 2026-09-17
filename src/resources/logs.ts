@@ -6,7 +6,7 @@ export class LogsResource {
 
   async list(params?: ListLogsParams): Promise<ListLogsResponse> {
     return this.http.get<ListLogsResponse>("/api/logs", {
-      params,
+      params: params as Record<string, string | number | undefined>,
     });
   }
 }

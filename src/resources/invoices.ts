@@ -14,7 +14,7 @@ export class InvoicesResource {
 
   async list(params?: ListInvoicesParams): Promise<ListInvoicesResponse> {
     return this.http.get<ListInvoicesResponse>("/api/invoices", {
-      params,
+      params: params as Record<string, string | number | undefined>,
     });
   }
 

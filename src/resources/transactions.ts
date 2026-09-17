@@ -14,7 +14,7 @@ export class TransactionsResource {
     params?: ListTransactionsParams,
   ): Promise<ListTransactionsResponse> {
     return this.http.get<ListTransactionsResponse>("/api/transactions", {
-      params,
+      params: params as Record<string, string | number | undefined>,
     });
   }
 

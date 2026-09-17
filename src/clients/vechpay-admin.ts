@@ -8,7 +8,8 @@ import { InvoicesResource } from "../resources/invoices";
 import { DashboardResource } from "../resources/dashboard";
 import { SettingsResource } from "../resources/settings";
 import { LogsResource } from "../resources/logs";
-import type { VechPayConfig, LoginResponse } from "../types/common";
+import type { VechPayConfig } from "../types/common";
+import type { LoginResponse } from "../types/auth";
 
 export class VechPayAdmin {
   readonly auth: AuthResource;

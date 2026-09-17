@@ -14,7 +14,7 @@ export class ApiKeysResource {
 
   async list(params?: ListApiKeysParams): Promise<ListApiKeysResponse> {
     return this.http.get<ListApiKeysResponse>("/api/api-keys", {
-      params,
+      params: params as Record<string, string | number | undefined>,
     });
   }
 

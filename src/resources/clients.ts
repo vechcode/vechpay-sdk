@@ -13,7 +13,7 @@ export class ClientsResource {
 
   async list(params?: ListClientsParams): Promise<ListClientsResponse> {
     return this.http.get<ListClientsResponse>("/api/clients", {
-      params,
+      params: params as Record<string, string | number | undefined>,
     });
   }
 
