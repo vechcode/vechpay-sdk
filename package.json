@@ -45,5 +45,7 @@
     "sdk"
   ],
   "license": "MIT",
-  "private": true
+  "publishConfig": {
+    "access": "public"
+  }
 }
